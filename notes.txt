@@ -49,3 +49,17 @@ git commit -m "Merge remote main with local"
 Step 12: Push code to GitHub
 git push -u origin main
 
+
+
+
+Task 2: create your first api project
+
+create main.py
+        from fastapi import FastAPI
+        app=FastAPI()
+
+        @app.get('/')
+        def index():
+            return "hey this is my first api"
+
+Run this  [ uvicorn main:app --reload ]  in the terminal after creation main.py
