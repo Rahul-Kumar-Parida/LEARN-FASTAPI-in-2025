@@ -1,0 +1,65 @@
+⭐Task 1: Setup For Fastapi Project
+Step 1: Create project folder
+mkdir fastapi-hello
+cd fastapi-hello
+
+Step 2: Create and activate virtual environment
+python -m venv fastapi-venv
+fastapi-venv\Scripts\activate   # For Windows
+
+Step 3: Install FastAPI and Uvicorn
+pip install fastapi uvicorn
+pip freeze > requirements.txt
+
+Step 4: Create main.py file and add code
+# main.py
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"message": "Hello FastAPI"}
+
+Step 5: Create .gitignore file and add:
+fastapi-venv/
+__pycache__/
+*.pyc
+.env
+
+Step 6: Initialize Git
+git init
+
+Step 7: Add and commit files
+git add .
+git commit -m "Initial FastAPI project setup"
+
+Step 8: Create GitHub repo (do not add README or .gitignore)
+
+Step 9: Link GitHub repo
+git remote add origin https://github.com/your-username/LEARN-FASTAPI-in-2025.git
+
+Step 10: Pull from GitHub if it has commits
+git pull origin main --allow-unrelated-histories
+
+Step 11: Resolve merge if needed
+git add .
+git commit -m "Merge remote main with local"
+
+Step 12: Push code to GitHub
+git push -u origin main
+
+
+
+
+Task 2: create your first api project
+
+create main.py
+        from fastapi import FastAPI
+        app=FastAPI()
+
+        @app.get('/')
+        def index():
+            return "hey this is my first api"
+
+Run this  [ uvicorn main:app --reload ]  in the terminal after creation main.py
